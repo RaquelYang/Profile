@@ -291,7 +291,7 @@
       <v-col cols="12" sm="6" md="4">
         <v-card :ripple="false" href="https://raquelyang.github.io/purecrop/#/">
           <v-img
-            src="../assets/images/purecrop.png"
+            src="../assets/images/purecrop.jpg"
             class="white--text align-end"
             height="200px"
           >
@@ -444,7 +444,6 @@ export default {
   },
   methods: {
     gotogitpage (url) {
-      console.log(url)
       window.location.href = url
     }
   }
