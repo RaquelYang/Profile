@@ -395,7 +395,7 @@
       <v-col cols="12" sm="6" md="4">
         <v-card :ripple="false" height="400px">
           <v-img
-            @click="gotogitpage('https://raquelyang.github.io/card-game/')"
+            @click="gotogitpage('https://raquelyang.github.io/popcorn/')"
             src="../assets/images/popcorn.png"
             class="white--text align-end cursor"
             gradient="to bottom, rgba(0,0,0,.05), rgba(0,0,0,.15)"
