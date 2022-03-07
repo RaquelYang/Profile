@@ -69,15 +69,6 @@
               <v-img src="../assets/images/self2.jpg" class="rounded px-16 py-16 img"></v-img>
             </v-col>
             <v-col cols="12">
-              <!-- <h1 class="text-h5">楊婷婷<span class="text-h5 ml-4">Raquel Yang</span></h1> -->
-              <!-- <div class="mt-5 d-flex align-center">
-                <v-icon left large>mdi-school</v-icon>
-                <span class="text-h6">臺北科技大學/材料所 <span class="grey--text text--darken-2 text-subtitle-1">2015 - 2017</span></span>
-              </div>
-              <div class="mt-5 d-flex align-center">
-                <v-icon left large>mdi-school</v-icon>
-                <span class="text-h6">臺北科技大學/材料與資源工程學系 <span class="grey--text text--darken-2 text-subtitle-1">2010 - 2015</span></span>
-              </div> -->
               <div>
                 <v-icon left>mdi-email-outline</v-icon>
                 <a href="mailto:lorehmmoreh007@gmail.com">
@@ -108,7 +99,6 @@
         </v-col>
         </v-col>
       </v-row>
-      <!-- 個人簡介 -->
     <!-- 經歷 -->
     <v-row id="educationandexperience">
       <v-col cols="12" md="6">
@@ -283,9 +273,11 @@
               <v-col cols="12" sm="6">
                 <v-img class="cursor" src="../assets/images/purecrop.jpg" @click="gotogitpage('https://raquelyang.github.io/Purecrop/#/')"></v-img>
               </v-col>
-              <v-col cols="12" sm="6">
-                <h3 class="text-h4">無疑農 Purecrop</h3>
-                <p class="pt-5">小農購物網站，包括會員(管理員)登入、註冊、管理員商品與輪播圖的增改刪查、訂單狀態變更等功能。資料庫使用 mongoDB ，並嵌入 Google Analytics 可分析使用者點擊狀態。</p>
+              <v-col cols="12" sm="6" class="d-flex flex-column justify-space-between">
+                <div>
+                  <h3 class="text-h4">無疑農 Purecrop</h3>
+                  <p class="pt-5">小農購物網站，包括會員(管理員)登入、註冊、管理員商品與輪播圖的增改刪查、訂單狀態變更等功能。資料庫使用 mongoDB ，並嵌入 Google Analytics 可分析使用者點擊狀態。</p>
+                </div>
                 <div>
                   <v-chip class="mb-3 mr-2">Vue</v-chip>
                   <v-chip class="mb-3 mr-2">Vuetify</v-chip>
@@ -315,7 +307,7 @@
           </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <v-card :ripple="false">
+        <v-card :ripple="false" height="400px">
           <v-img
             src="../assets/images/michelin.jpeg"
             class="white--text align-end"
@@ -323,8 +315,9 @@
             height="200px"
           >
           </v-img>
-          <v-card-text class="text--primary py-0">
-            <v-card-title class="px-0 pb-5">
+          <v-card-text class="card text--primary py-0 d-flex flex-column justify-space-between">
+            <div>
+              <v-card-title class="px-0 pb-5">
               米其林餐廳 Linebot
               <v-spacer></v-spacer>
               <v-btn icon href="https://github.com/RaquelYang/linebot_homework-D">
@@ -332,13 +325,16 @@
               </v-btn>
             </v-card-title>
             <v-card-subtitle class="px-0">使用 RESTful API 串接米其林餐廳官網外部資料，並整合 Line 機器人查找餐廳 ID:@488pghgt</v-card-subtitle>
-            <v-chip class="mb-3 mr-2">Node.js</v-chip>
-            <v-chip class="mb-3 mr-2">linebot</v-chip>
+            </div>
+            <div>
+              <v-chip class="mb-3 mr-2">Node.js</v-chip>
+              <v-chip class="mb-3 mr-2">linebot</v-chip>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <v-card :ripple="false"  href="">
+        <v-card :ripple="false" height="400px">
           <v-img
             @click="gotogitpage('https://raquelyang.github.io/pomodoro1/#/')"
             src="../assets/images/tomato.svg"
@@ -347,17 +343,138 @@
             height="200px"
           >
           </v-img>
-          <v-card-text class="text--primary py-0">
-            <v-card-title class="px-0 pb-5">
+
+          <v-card-text class="text--primary py-0 card d-flex flex-column justify-space-between">
+            <div>
+              <v-card-title class="px-0 pb-5">
               番茄鐘
               <v-spacer></v-spacer>
               <v-btn icon href="https://github.com/RaquelYang/pomodoro1">
                 <v-icon>mdi-github</v-icon>
               </v-btn>
             </v-card-title>
-            <v-card-subtitle class="px-0">使用 F2E 設計稿切版、設計番茄鐘功能，並部署 PWA 製成簡易網路應用程式</v-card-subtitle>
-            <v-chip class="mb-3 mr-2">Vue</v-chip>
-            <v-chip class="mb-3 mr-2">SCSS</v-chip>
+            <v-card-subtitle class="px-0">使用 F2E 設計稿切版、設計番茄鐘功能，其使用 Vue 組件間通信並部署 PWA 製成簡易網路應用程式</v-card-subtitle>
+            </div>
+            <div>
+              <v-chip class="mb-3 mr-2">HTML</v-chip>
+              <v-chip class="mb-3 mr-2">SCSS</v-chip>
+              <v-chip class="mb-3 mr-2">Vue</v-chip>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-card :ripple="false" height="400px">
+          <v-img
+            @click="gotogitpage('https://raquelyang.github.io/Typinggame/')"
+            src="../assets/images/typinggame.jpg"
+            class="white--text align-end cursor"
+            gradient="to bottom, rgba(0,0,0,.05), rgba(0,0,0,.15)"
+            height="200px"
+          >
+          </v-img>
+          <v-card-text class="text--primary py-0 card d-flex flex-column justify-space-between">
+            <div>
+              <v-card-title class="px-0 pb-5">
+              打字小遊戲
+              <v-spacer></v-spacer>
+              <v-btn icon href="https://github.com/RaquelYang/Typinggame">
+                <v-icon>mdi-github</v-icon>
+              </v-btn>
+              </v-card-title>
+            <v-card-subtitle class="px-0">使用 jQuery 製作練習打英文字母的小遊戲，成功打完一個字就加一分，會顯示排行前五名的選手名稱。</v-card-subtitle>
+            </div>
+            <div>
+              <v-chip class="mb-3 mr-2">HTML</v-chip>
+              <v-chip class="mb-3 mr-2">CSS</v-chip>
+              <v-chip class="mb-3 mr-2">jQuery</v-chip>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-card :ripple="false" height="400px">
+          <v-img
+            @click="gotogitpage('https://raquelyang.github.io/card-game/')"
+            src="../assets/images/popcorn.png"
+            class="white--text align-end cursor"
+            gradient="to bottom, rgba(0,0,0,.05), rgba(0,0,0,.15)"
+            height="200px"
+          >
+          </v-img>
+          <v-card-text class="text--primary py-0 card d-flex flex-column justify-space-between">
+            <div>
+              <v-card-title class="px-0 pb-5">
+              爆米花點擊遊戲
+              <v-spacer></v-spacer>
+              <v-btn icon href="https://github.com/RaquelYang/popcorn">
+                <v-icon>mdi-github</v-icon>
+              </v-btn>
+              </v-card-title>
+            <v-card-subtitle class="px-0">使用 jQuery 製作爆米花點擊小遊戲，成功點擊爆米花加一分，點擊玉米粒則扣一分，時間結束後會顯示分數。</v-card-subtitle>
+            </div>
+            <div>
+              <v-chip class="mb-3 mr-2">HTML</v-chip>
+              <v-chip class="mb-3 mr-2">CSS</v-chip>
+              <v-chip class="mb-3 mr-2">jQuery</v-chip>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-card :ripple="false" height="400px">
+          <v-img
+            @click="gotogitpage('https://raquelyang.github.io/bootstrap-layout/')"
+            src="../assets/images/bootstrap.png"
+            class="white--text align-end cursor"
+            gradient="to bottom, rgba(0,0,0,.05), rgba(0,0,0,.15)"
+            height="200px"
+          >
+          </v-img>
+          <v-card-text class="text--primary py-0 card d-flex flex-column justify-space-between">
+            <div>
+              <v-card-title class="px-0 pb-5">
+              Bootstrap 切版
+              <v-spacer></v-spacer>
+              <v-btn icon href="https://github.com/RaquelYang/bootstrap-layout">
+                <v-icon>mdi-github</v-icon>
+              </v-btn>
+              </v-card-title>
+            <v-card-subtitle class="px-0">使用 bootstrap 切兩欄、三欄、滿版與輪播圖，並有RWD 功能</v-card-subtitle>
+            </div>
+            <div>
+              <v-chip class="mb-3 mr-2">HTML</v-chip>
+              <v-chip class="mb-3 mr-2">Bootstrap</v-chip>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-card :ripple="false" height="400px">
+          <v-img
+            @click="gotogitpage('https://raquelyang.github.io/templateMonster/')"
+            src="../assets/images/templateMonster.png"
+            class="white--text align-end cursor"
+            gradient="to bottom, rgba(0,0,0,.05), rgba(0,0,0,.15)"
+            height="200px"
+          >
+          </v-img>
+          <v-card-text class="text--primary py-0 card d-flex flex-column justify-space-between">
+            <div>
+              <v-card-title class="px-0 pb-5">
+              Construction 切版(純 CSS )
+              <v-spacer></v-spacer>
+              <v-btn icon href="https://github.com/RaquelYang/templateMonster">
+                <v-icon>mdi-github</v-icon>
+              </v-btn>
+              </v-card-title>
+            <v-card-subtitle class="px-0">參考 bootstrap 格線系統切，從 TemplateMonster 網站中挑選樣板，並做出 RWD 功能</v-card-subtitle>
+            </div>
+            <div>
+              <v-chip class="mb-3 mr-2">HTML</v-chip>
+              <v-chip class="mb-3 mr-2">CSS</v-chip>
+              <v-chip class="mb-3 mr-2">JavaScript</v-chip>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -386,6 +503,9 @@
       left: -25px;
       }
     }
+  }
+  .card{
+    height: 50%;
   }
   .theme--light.v-list-item--disabled{
     color:#333
@@ -449,8 +569,8 @@
     }
   }
   .portfolio p{
-    line-height: 1.4rem;
-    letter-spacing: 1px;
+    line-height: 1.8;
+    letter-spacing: 2px;
   }
   .cursor{
     cursor: pointer;
