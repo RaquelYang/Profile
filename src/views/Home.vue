@@ -23,19 +23,16 @@
               <span class="text-subtitle-1">個人簡介</span>
             </v-list-item-title>
           </v-list-item>
-
           <v-list-item href="#educationandexperience" >
             <v-list-item-title>
               <span class="text-subtitle-1">學經歷</span>
             </v-list-item-title>
           </v-list-item>
-
           <v-list-item href="#skill" >
             <v-list-item-title>
               <span class="text-subtitle-1">技能</span>
             </v-list-item-title>
           </v-list-item>
-
           <v-list-item href="#portfolio" >
             <v-list-item-title>
               <span class="text-subtitle-1">作品集</span>
@@ -44,33 +41,32 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-      <v-app-bar
-      class="nav"
-      fixed
-      flat
-      >
-        <v-container class="name">
-          <v-row class="nav">
-            <a href="#">
-              <h1 class="text-h5">楊婷婷<span class="text-h6 ml-4">Raquel Yang</span></h1>
-            </a>
-            <v-spacer></v-spacer>
-            <a href="#home" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">個人簡介</a>
-            <a href="#educationandexperience" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">學經歷</a>
-            <a href="#skill" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">技能</a>
-            <a href="#portfolio" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">作品集</a>
-            <v-app-bar-nav-icon @click="drawer=!drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
-          </v-row>
-
-        </v-container>
-      </v-app-bar>
+    <v-app-bar
+    class="navbar"
+    fixed
+    flat
+    >
+      <v-container class="name">
+        <v-row class="nav">
+          <a href="#">
+            <h1 class="text-h5">楊婷婷<span class="text-h6 ml-4">Raquel Yang</span></h1>
+          </a>
+          <v-spacer></v-spacer>
+          <a href="#home" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">個人簡介</a>
+          <a href="#educationandexperience" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">學經歷</a>
+          <a href="#skill" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">技能</a>
+          <a href="#portfolio" v-smooth-scroll="{offset: -100}" class="hidden-sm-and-down">作品集</a>
+          <v-app-bar-nav-icon @click="drawer=!drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
+        </v-row>
+      </v-container>
+    </v-app-bar>
     <!-- top -->
     <v-container class="maincontent px-5 py-5">
       <v-row>
         <v-col cols="12" sm="6" md="4">
           <v-row class="justify-center">
             <v-col cols="12">
-              <v-img src="../assets/images/self.jpeg" class="rounded px-16 py-16"></v-img>
+              <v-img src="../assets/images/self2.jpg" class="rounded px-16 py-16 img"></v-img>
             </v-col>
             <v-col cols="12">
               <!-- <h1 class="text-h5">楊婷婷<span class="text-h5 ml-4">Raquel Yang</span></h1> -->
@@ -111,7 +107,6 @@
           </p>
         </v-col>
         </v-col>
-
       </v-row>
       <!-- 個人簡介 -->
     <!-- 經歷 -->
@@ -271,12 +266,6 @@
               <v-icon left color="#199F38">mdi-database</v-icon>
               MongoDB
           </li>
-        </ul>
-      </v-col>
-      <v-col cols="6" sm="4">
-        <p class="text-h5">工具</p>
-        <v-divider></v-divider>
-        <ul class="mt-4">
           <li>
             <v-icon left color="#F05033">mdi-git</v-icon>
             git
@@ -288,28 +277,42 @@
       <v-col cols="12" class="mt-10">
         <p class="text-h4">作品集</p>
       </v-col>
-      <v-col cols="12" sm="6" md="4">
-        <v-card :ripple="false" href="https://raquelyang.github.io/purecrop/#/">
-          <v-img
-            src="../assets/images/purecrop.jpg"
-            class="white--text align-end"
-            height="200px"
-          >
-          </v-img>
-          <v-card-text class="text--primary py-0">
-            <v-card-title class="px-0 pb-5">
-              無疑農
-              <v-spacer></v-spacer>
-              <v-btn icon href="https://github.com/RaquelYang/purecrop">
-                <v-icon>mdi-github</v-icon>
-              </v-btn>
-            </v-card-title>
-            <v-card-subtitle class="px-0">簡易小農購物網站，包括登入、註冊、新增商品等連接後端資料庫，並嵌入 Google Analytics </v-card-subtitle>
-            <v-chip class="mb-3 mr-2">Vue</v-chip>
-            <v-chip class="mb-3 mr-2">Vuetify</v-chip>
-            <v-chip class="mb-3 mr-2">mongoDB</v-chip>
-          </v-card-text>
-        </v-card>
+      <v-col cols="12" sm="12" md="12">
+          <v-card class="purecrop">
+            <v-row class="py-5 px-5">
+              <v-col cols="12" sm="6">
+                <v-img class="cursor" src="../assets/images/purecrop.jpg" @click="gotogitpage('https://raquelyang.github.io/Purecrop/#/')"></v-img>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <h3 class="text-h4">無疑農 Purecrop</h3>
+                <p class="pt-5">小農購物網站，包括會員(管理員)登入、註冊、管理員商品與輪播圖的增改刪查、訂單狀態變更等功能。資料庫使用 mongoDB ，並嵌入 Google Analytics 可分析使用者點擊狀態。</p>
+                <div>
+                  <v-chip class="mb-3 mr-2">Vue</v-chip>
+                  <v-chip class="mb-3 mr-2">Vuetify</v-chip>
+                  <v-chip class="mb-3 mr-2">SCSS</v-chip>
+                  <v-chip class="mb-3 mr-2">Node.js</v-chip>
+                  <v-chip class="mb-3 mr-2">mongoDB</v-chip>
+                </div>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <p class="text-h5">前端</p>
+                <ul class="text-subtitle-1">
+                  <li>Vue 前端框架搭配 Vuetify </li>
+                  <li>Vuex 管理前端狀態</li>
+                  <li>Axios 向後端伺服器請求資料</li>
+                  <li>註冊與登入功能</li>
+                  <li>管理員資料修改</li>
+                </ul>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <p class="text-h5">後端</p>
+                <ul class="text-subtitle-1">
+                  <li>Node.js 搭配 Express.js 建立伺服器</li>
+                  <li>MongoDB 作為後端資料庫，管理產品、輪播圖增改刪查刪查</li>
+                </ul>
+              </v-col>
+            </v-row>
+          </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
         <v-card :ripple="false">
@@ -365,15 +368,35 @@
 </template>
 <style lang="scss">
 #home{
-  margin-bottom: 5rem;
+  background-color: #eee;
+  padding: 6rem 0;
+  .purecrop {
+    p{
+    letter-spacing: .1rem;
+    line-height: 1.8;
+    }
+    li{
+      font-size: 1.1rem;
+      &::before{
+      content:'➤';
+      position: absolute;
+      display:block;
+      color: #666;
+      top:8px;
+      left: -25px;
+      }
+    }
+  }
   .theme--light.v-list-item--disabled{
     color:#333
   }
-  .nav{
+  .navbar{
     backdrop-filter: blur(10px);
-    background-color: transparent;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    .nav{
+      justify-content: center;
+      align-items: center;
+    }
     a{
       margin: 0 1rem;
       opacity: .8;
@@ -386,8 +409,7 @@
     color:#333
   }
   .maincontent{
-    // margin: 3rem 0;
-    margin-top: 3rem;
+    border-radius: .2rem;
     background-color: white;
     box-shadow: 0px 5px 20px rgba(0,0,0,.1);
   }
@@ -423,7 +445,7 @@
       color: #666;
       top:8px;
       left: -22px;
-    }
+      }
     }
   }
   .portfolio p{
